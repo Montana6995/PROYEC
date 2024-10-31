@@ -1,0 +1,72 @@
+﻿@model MVC.Models.Pago
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Planilla de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .header h1 {
+                font-size: 24px;
+                color: #333;
+                margin: 0;
+            }
+
+        .details {
+            margin-bottom: 20px;
+        }
+
+            .details p {
+                margin: 5px 0;
+            }
+
+            .details .title {
+                font-weight: bold;
+                font-size: 14px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <div class="header">
+            <h1>Planilla de Pago</h1>
+        </div>
+
+        <!-- Información del Pago -->
+        <div class="details">
+            <p class="title">Detalles del Pago:</p>
+            <p><strong>ID del Pago:</strong> @Model.IdPago</p>
+            <p><strong>ID del Puesto:</strong> @Model.IdPuesto</p>
+            <p><strong>ID del Personal:</strong> @Model.IdPersonal</p>
+            <p><strong>ID del Tipo de Servicio:</strong> @Model.IdTipoServicio</p>
+            <p><strong>Monto:</strong> @Model.Monto Bs</p>
+            <p><strong>Fecha:</strong> @Model.Fecha.ToShortDateString()</p>
+        </div>
+    </div>
+</body>
+</html>
